@@ -6,7 +6,7 @@ export const signup = (email, password) => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((data) => {
-        console.log(data)
+        console.log(data);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -34,6 +34,7 @@ export const signin = (email, password) => {
             uid: user.uid,
           },
         });
+        window.location.reload();
         // ...
       })
       .catch((error) => {
